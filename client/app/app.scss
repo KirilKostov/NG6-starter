@@ -1,7 +1,9 @@
-@import "common/common";
+@import 'common/common';
+
+body {
+  background-color: $darkBgColor;
+}
 
 .app {
   height: 100%;
-  background-color: $lightBgColor;
 }
-

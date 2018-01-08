@@ -1,13 +1,35 @@
 @import '../../common/common';
 
 .users-table {
-  background-color: $darkBgColor;
-  height: 50rem;
-  padding: 3rem;
+  margin: 60px auto 0;
+  background-color: $lightBgColor;
   color: orange;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+
+  tr.bordered {
+    border-top: 1px solid $darkTextColor;
+  }
+
+  th,
+  td {
+    padding: 15px 25px;
+  }
+
+  th {
+    text-align: left;
+    font-size: 22px;
+  }
 
   input,
   button {
+    font-style: 14px;
     color: $darkTextColor;
+    border: 0;
+    border-radius: 4px;
+  }
+
+  input {
+    -webkit-appearance: none;
   }
 }

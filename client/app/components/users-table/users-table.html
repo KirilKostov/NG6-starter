@@ -1,5 +1,10 @@
 <form name="$ctrl.userForm" novalidate ng-submit="$ctrl.addNewUser($ctrl.newUser)">
   <table class="users-table">
+    <tr>
+      <th>Name:</th>
+      <th>Phone:</th>
+      <th>Date of birth:</th>
+    </tr>
     <tr ng-repeat="user in $ctrl.users">
       <td>
         <span ng-if="!user.isEdited">{{user.name}}</span>
@@ -23,21 +28,24 @@
         </div>
       </td>
     </tr>
+    <tr class="bordered">
+      <td colspan="4">Create new user:</td>
+    </tr>
     <tr>
       <td>
-        <input type="text" required ng-model="$ctrl.newUser.name" name="name" />
+        <input type="text" required ng-model="$ctrl.newUser.name" name="name" placeholder="user name" />
       </td>
       <td>
-        <input type="text" required ng-model="$ctrl.newUser.phone" name="phone" /> </td>
+        <input type="tel" required ng-model="$ctrl.newUser.phone" name="phone" placeholder="user phone"/> </td>
       <td>
         <input type="date" required ng-model="$ctrl.newUser.dob" name="dob" /> </td>
       <td>
         <input type="submit">
       </td>
     </tr>
-    <tr>
-      <td colspan="2">Average Age</td>
-      <td>{{$ctrl.averageAge()}}</td>
+    <tr class="bordered">
+      <td>Average Age:</td>
+      <td colspan="3">{{$ctrl.averageAge()}}</td>
     </tr>
   </table>
 </form>
