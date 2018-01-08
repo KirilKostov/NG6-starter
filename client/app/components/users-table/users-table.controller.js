@@ -29,6 +29,17 @@ class UsersTableController {
     $onChanges() {
         this.resetForm();
     }
+
+    averageAge() {
+        return this.users.map(u => this._calculateAge(u.dob)).reduce((a, b) => a + b, 0) / this.users.length;
+    }
+    _calculateAge(birthday) {
+        const birthdate = new Date(birthday);
+        const today = new Date();
+        let age = ((today - birthdate) / (31557600000));
+        age = Math.floor(age);
+        return age;
+    }
 }
 
 export default UsersTableController;
