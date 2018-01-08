@@ -1,3 +1,28 @@
+# eMoov AngularJS app
+
+## Intro:
+* This is an AngularJS tech challenge project. Its main goal is to create a table of users from a JSON file and to enable 'create', 'edit' and 'delete' functionality for each user.
+
+## System requirements:
+* Node (version used: 9.3.0);
+* Npm (version used: 5.6.0);
+
+## How to run the project locally:
+* Clone the repo - https://github.com/KirilKostov/emoov-app-angularjs
+* Open the terminal and run:
+
+    ```npm install```
+
+    This will provide you with all dependencies needed for the application.
+
+* To start the application's server run:
+
+    ```npm start```
+
+    The port will be displayed in the terminal.
+
+* This app is based on https://github.com/gdi2290/NG6-starter (more info below).
+
 <p align="center">
   <a href="http://courses.angularclass.com/courses/angular-2-fundamentals" target="_blank">
     <img width="438" alt="Angular 2 Fundamentals" src="https://cloud.githubusercontent.com/assets/1016365/17200649/085798c6-543c-11e6-8ad0-2484f0641624.png">
@@ -41,7 +66,7 @@ ___
     * [Running the App](#running-the-app)
         * [Gulp Tasks](#tasks)
         * [Testing](#testing)
-		* [Generating Components](#generating-components)		
+		* [Generating Components](#generating-components)
 * [Starter Kit Support and Questions](#starter-kit-support-and-questions)
 
 # Walkthrough
@@ -66,12 +91,12 @@ NG6 uses NPM scripts, Gulp, and Webpack together for its build system. Yes, you 
 **Check out the [JSPM version](https://github.com/angularclass/NG6-starter/tree/jspm)--an alternative to Webpack as an ES6 build system.**
 
 ## File Structure
-We use a componentized approach with NG6. This will be the eventual standard (and particularly helpful, if using 
-Angular's new router) as well as a great way to ensure a tasteful transition to Angular 2, when the time is ripe. 
-Everything--or mostly everything, as we'll explore (below)--is a component. A component is a self-contained 
-concern--may it be a feature or strictly-defined, ever-present element of the UI (such as a header, sidebar, or 
-footer). Also characteristic of a component is that it harnesses its own stylesheets, templates, controllers, routes, 
-services, and specs. This encapsulation allows us the comfort of isolation and structural locality. Here's how it 
+We use a componentized approach with NG6. This will be the eventual standard (and particularly helpful, if using
+Angular's new router) as well as a great way to ensure a tasteful transition to Angular 2, when the time is ripe.
+Everything--or mostly everything, as we'll explore (below)--is a component. A component is a self-contained
+concern--may it be a feature or strictly-defined, ever-present element of the UI (such as a header, sidebar, or
+footer). Also characteristic of a component is that it harnesses its own stylesheets, templates, controllers, routes,
+services, and specs. This encapsulation allows us the comfort of isolation and structural locality. Here's how it
 looks:
 ```
 client
@@ -111,7 +136,7 @@ Tools needed to run this app:
 
 ## Running the App
 NG6 uses Gulp to build and launch the development environment. After you have installed all dependencies, you may run the app. Running `npm start` will bundle the app with `webpack`, launch a development server, and watch all files. The port will be displayed in the terminal.
- 
+
 ### Tasks
 Here's a list of available tasks:
 * `npm run build`
@@ -124,7 +149,7 @@ Here's a list of available tasks:
   * runs `serve`.
 * `npm run component`
   * scaffolds a new Angular component. [Read below](#generating-components) for usage details.
-  
+
 ### Testing
 To run the tests, run `npm test`.
 
@@ -158,9 +183,9 @@ The parameter following the `--name` flag is the name of the component to be cre
 
 The component will be created, by default, inside `client/app/components`. To change this, apply the `--parent` flag, followed by a path relative to `client/app/components/`.
 
-For example, running `npm run component -- --name signup --parent auth` will create a `signup` component at `client/app/components/auth/signup`.  
+For example, running `npm run component -- --name signup --parent auth` will create a `signup` component at `client/app/components/auth/signup`.
 
-Running `npm run component -- --name footer --parent ../common` creates a `footer` component at `client/app/common/footer`.  
+Running `npm run component -- --name footer --parent ../common` creates a `footer` component at `client/app/common/footer`.
 
 Because the argument to `--name` applies to the folder name **and** the actual component name, make sure to camelcase the component names.
 
@@ -172,7 +197,7 @@ Because the argument to `--name` applies to the folder name **and** the actual c
 
 ___
 
-enjoy — **AngularClass** 
+enjoy — **AngularClass**
 
 <br><br>
 
