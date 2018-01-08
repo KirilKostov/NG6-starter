@@ -1,13 +1,11 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import users-tableComponent from './users-table.component';
+import usersTableComponent from './users-table.component';
 
-let users-tableModule = angular.module('users-table', [
-  uiRouter
+let usersTableModule = angular.module('users-table', [
 ])
 
-.component('users-table', users-tableComponent)
+.component('usersTableComponent', usersTableComponent)
 
 .name;
 
-export default users-tableModule;
+export default usersTableModule;

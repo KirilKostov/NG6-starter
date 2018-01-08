@@ -1,3 +1,39 @@
-<div>
-  <h1>{{ $ctrl.name }}</h1>
-</div>
+<form name="$ctrl.userForm" novalidate ng-submit="$ctrl.addNewUser($ctrl.newUser)">
+  <table class="users-table">
+    <tr ng-repeat="user in $ctrl.users">
+      <td>
+        <span ng-if="!user.isEdited">{{user.name}}</span>
+        <input type="text" ng-if="user.isEdited" required ng-model="user.name" name="name" />
+      </td>
+      <td>
+        <span ng-if="!user.isEdited">{{user.phone}}</span>
+        <input type="text" ng-if="user.isEdited" required ng-model="user.phone" name="phone" />
+      </td>
+      <td>
+        <span ng-if="!user.isEdited">{{user.dob | date}}</span>
+        <input type="text" ng-if="user.isEdited" required ng-model="user.dob" name="dob" /> </td>
+      </td>
+      <td>
+        <div ng-if="!user.isEdited">
+          <button type="button" ng-click="$ctrl.startEditing(user)">Edit</button>
+          <button type="button" ng-click="$ctrl.deleteUser(user)">Delete</button>
+        </div>
+        <div ng-if="user.isEdited">
+          <button type="button" ng-click="$ctrl.editUser(user)">Save</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" required ng-model="$ctrl.newUser.name" name="name" />
+      </td>
+      <td>
+        <input type="text" required ng-model="$ctrl.newUser.phone" name="phone" /> </td>
+      <td>
+        <input type="date" required ng-model="$ctrl.newUser.dob" name="dob" /> </td>
+      <td>
+        <input type="submit">
+      </td>
+    </tr>
+  </table>
+</form>

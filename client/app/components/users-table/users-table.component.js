@@ -2,10 +2,15 @@ import template from './users-table.html';
 import controller from './users-table.controller';
 import './users-table.scss';
 
-let users-tableComponent = {
-  bindings: {},
+let usersTableComponent = {
+  bindings: {
+      users: '<',
+      onNewUserAdded: '&',
+      onUserDeleted: '&',
+      onUserEdited: '&',
+  },
   template,
   controller
 };
 
-export default users-tableComponent;
+export default usersTableComponent;
